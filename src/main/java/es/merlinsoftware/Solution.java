@@ -28,7 +28,7 @@ public class Solution {
         );
 
         return weightedValues.entrySet().stream()
-                .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
+                .sorted((firstProduct, secondProduct) -> secondProduct.getValue().compareTo(firstProduct.getValue()))
                 .map(Map.Entry::getKey)
                 .collect(Collectors.toList());
     }
